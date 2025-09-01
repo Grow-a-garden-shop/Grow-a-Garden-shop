@@ -3,124 +3,181 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Betaalinterface Eldorado-style</title>
+<title>Mijn Game Shop</title>
 <style>
-    /* Achtergrond Eldorado-achtig */
-    body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(135deg, #1a1a2e, #162447, #1f4068);
-        background-size: 400% 400%;
-        animation: gradientBG 15s ease infinite;
-        color: #fff;
-    }
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1e1e2f, #2c2c3d);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
 
-    @keyframes gradientBG {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
+  header {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
 
-    .container {
-        max-width: 500px;
-        margin: 80px auto;
-        background: rgba(0,0,0,0.6);
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 0 20px #00e6e6;
-        text-align: center;
-    }
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 10px 0;
+  }
 
-    h2 {
-        color: #00e6e6;
-        margin-bottom: 20px;
-    }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+  }
 
-    .payment-options label {
-        display: block;
-        padding: 15px;
-        margin: 10px 0;
-        border: 2px solid #00e6e6;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-        position: relative;
-    }
+  nav a:hover {
+    color: #f39c12;
+  }
 
-    .payment-options input[type="radio"] {
-        display: none;
-    }
+  .category-section {
+    padding: 30px;
+  }
 
-    .payment-options input[type="radio"]:checked + span {
-        background: rgba(0,230,230,0.2);
-        box-shadow: 0 0 15px #00e6e6;
-    }
+  .category-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f39c12;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 
-    .payment-options span {
-        display: block;
-        padding: 10px;
-        border-radius: 10px;
-        transition: 0.3s;
-    }
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
 
-    #payButton {
-        margin-top: 20px;
-        padding: 15px 30px;
-        font-size: 18px;
-        background: #00e6e6;
-        color: #000;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+  .game-card {
+    background-color: #2c2c3d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
+  }
 
-    #payButton:hover {
-        background: #00b3b3;
-        box-shadow: 0 0 20px #00e6e6;
-    }
+  .game-card:hover {
+    transform: scale(1.05);
+  }
+
+  .game-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .game-card .game-info {
+    padding: 15px;
+  }
+
+  .game-card .game-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .game-card .game-price {
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 10px;
+  }
+
+  .game-card button {
+    background-color: #f39c12;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.2s;
+  }
+
+  .game-card button:hover {
+    background-color: #e67e22;
+  }
+
+  /* Roblox sectie */
+  #roblox-section {
+    background-color: #0070ba; /* andere kleur voor Roblox */
+    padding: 30px;
+    border-radius: 12px;
+    margin: 20px 0;
+  }
+
+  #roblox-section .category-title {
+    border-color: #ffd700;
+  }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>Kies je betaalmethode</h2>
-    <div class="payment-options">
-        <label>
-            <input type="radio" name="payment" value="ideal" checked>
-            <span>iDEAL</span>
-        </label>
-        <label>
-            <input type="radio" name="payment" value="creditcard">
-            <span>Creditcard</span>
-        </label>
-        <label>
-            <input type="radio" name="payment" value="paypal">
-            <span>PayPal</span>
-        </label>
-        <label>
-            <input type="radio" name="payment" value="applepay">
-            <span>Apple Pay</span>
-        </label>
-        <label>
-            <input type="radio" name="payment" value="googlepay">
-            <span>Google Pay</span>
-        </label>
-        <label>
-            <input type="radio" name="payment" value="banktransfer">
-            <span>Bankoverschrijving</span>
-        </label>
+<header>Mijn Game Shop</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">Minecraft</a>
+  <a href="#">Fortnite</a>
+  <a href="#">Roblox</a>
+  <a href="#">Overig</a>
+</nav>
+
+<div class="category-section" id="minecraft-section">
+  <h2 class="category-title">Minecraft</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="https://via.placeholder.com/200x140?text=Minecraft+Server" alt="Minecraft Server">
+      <div class="game-info">
+        <div class="game-title">Minecraft Server 30 dagen</div>
+        <div class="game-price">€5,99</div>
+        <button>Koop nu</button>
+      </div>
     </div>
-    <button id="payButton">Betaal nu</button>
+    <!-- Meer Minecraft items hier -->
+  </div>
 </div>
 
-<script>
-document.getElementById('payButton').addEventListener('click', () => {
-    const selectedPayment = document.querySelector('input[name="payment"]:checked').value;
-    alert('Je hebt gekozen voor: ' + selectedPayment);
-    // Hier kun je later een API call maken naar je betaalprovider
-});
-</script>
+<div class="category-section" id="roblox-section">
+  <h2 class="category-title">Roblox</h2>
+  <div class="game-grid">
+    <div class="game-card">
+      <img src="https://via.placeholder.com/200x140?text=Pet+Simulator+X" alt="Pet Simulator X">
+      <div class="game-info">
+        <div class="game-title">Pet Simulator X</div>
+        <div class="game-price">99 Robux</div>
+        <button>Koop Robux</button>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://via.placeholder.com/200x140?text=Brookhaven" alt="Brookhaven">
+      <div class="game-info">
+        <div class="game-title">Brookhaven</div>
+        <div class="game-price">199 Robux</div>
+        <button>Koop Robux</button>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="https://via.placeholder.com/200x140?text=Tower+of+Hell" alt="Tower of Hell">
+      <div class="game-info">
+        <div class="game-title">Tower of Hell</div>
+        <div class="game-price">149 Robux</div>
+        <button>Koop Robux</button>
+      </div>
+    </div>
+
+    <!-- Voeg hier nog 7 games toe -->
+  </div>
+</div>
 
 </body>
 </html>
