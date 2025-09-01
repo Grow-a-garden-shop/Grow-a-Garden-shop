@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roblox Game Shop</title>
+  <title>Game Shop</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #1e1e2f, #2c2c3d);
+      background: #0d0d1a;
       color: #fff;
       margin: 0;
       padding: 0;
     }
 
     header {
-      background-color: #111;
+      background-color: #1a1a2e;
       padding: 20px;
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
+      color: #ffd700;
+      letter-spacing: 1px;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: #222;
+      background-color: #14142b;
       padding: 10px 0;
     }
 
@@ -33,10 +35,11 @@
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: #f39c12;
+      color: #ffd700;
     }
 
     .category-section {
@@ -46,7 +49,7 @@
     .category-title {
       font-size: 1.8rem;
       margin-bottom: 20px;
-      border-bottom: 2px solid #f39c12;
+      border-bottom: 2px solid #ffd700;
       display: inline-block;
       padding-bottom: 5px;
     }
@@ -58,15 +61,17 @@
     }
 
     .game-card {
-      background-color: #2c2c3d;
+      background-color: #1f1f38;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      transition: transform 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
     }
 
     .game-card:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255,215,0,0.6);
     }
 
     .game-card img {
@@ -82,32 +87,35 @@
     .game-card .game-title {
       font-size: 1.2rem;
       margin-bottom: 10px;
+      font-weight: bold;
     }
 
     .game-card .game-price {
       font-weight: bold;
-      color: #f39c12;
+      color: #ffd700;
       margin-bottom: 10px;
     }
 
     .game-card button {
-      background-color: #f39c12;
+      background: linear-gradient(45deg, #ffd700, #ffb800);
       border: none;
       padding: 10px;
       border-radius: 8px;
       cursor: pointer;
       font-weight: bold;
       width: 100%;
-      transition: background 0.2s;
+      transition: background 0.3s, transform 0.2s;
+      color: #1a1a2e;
     }
 
     .game-card button:hover {
-      background-color: #e67e22;
+      background: linear-gradient(45deg, #ffb800, #ffd700);
+      transform: scale(1.05);
     }
 
     /* Roblox sectie */
     #roblox-section {
-      background-color: #0070ba; /* andere kleur voor Roblox */
+      background-color: #1e1e3a;
       padding: 30px;
       border-radius: 12px;
       margin: 20px 0;
@@ -116,11 +124,24 @@
     #roblox-section .category-title {
       border-color: #ffd700;
     }
+
+    /* Fortnite sectie */
+    #fortnite-section {
+      background-color: #1e1e3a;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+
+    #fortnite-section .category-title {
+      border-color: #ffd700;
+    }
+
   </style>
 </head>
 <body>
 
-<header>Roblox Game Shop</header>
+<header>Game Shop</header>
 
 <nav>
   <a href="#">Home</a>
@@ -131,7 +152,7 @@
 </nav>
 
 <div class="category-section" id="roblox-section">
-  <h2 class="category-title">Roblox</h2>
+  <h2 class="category-title">Roblox Populaire Games</h2>
   <div class="game-grid">
     <div class="game-card">
       <img src="https://via.placeholder.com/200x140?text=Pet+Simulator+X" alt="Pet Simulator X">
@@ -160,66 +181,46 @@
       </div>
     </div>
 
+    <!-- Voeg hier alle andere Roblox-games toe zoals in vorige code -->
+  </div>
+</div>
+
+<div class="category-section" id="fortnite-section">
+  <h2 class="category-title">Fortnite V-Bucks Aanbiedingen</h2>
+  <div class="game-grid">
     <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Adopt+Me" alt="Adopt Me">
+      <img src="https://via.placeholder.com/200x140?text=1000+V-Bucks" alt="1000 V-Bucks">
       <div class="game-info">
-        <div class="game-title">Adopt Me</div>
-        <div class="game-price">249 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
+        <div class="game-title">1000 V-Bucks</div>
+        <div class="game-price">€8,00</div>
+        <button onclick="window.location.href='https://www.eldorado.gg/fortnite-vbucks/t/16'">Koop V-Bucks</button>
       </div>
     </div>
 
     <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Arsenal" alt="Arsenal">
+      <img src="https://via.placeholder.com/200x140?text=2800+V-Bucks" alt="2800 V-Bucks">
       <div class="game-info">
-        <div class="game-title">Arsenal</div>
-        <div class="game-price">199 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
+        <div class="game-title">2800 V-Bucks</div>
+        <div class="game-price">€22,00</div>
+        <button onclick="window.location.href='https://www.eldorado.gg/fortnite-vbucks/t/16'">Koop V-Bucks</button>
       </div>
     </div>
 
     <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Shindo+Life" alt="Shindo Life">
+      <img src="https://via.placeholder.com/200x140?text=5000+V-Bucks" alt="5000 V-Bucks">
       <div class="game-info">
-        <div class="game-title">Shindo Life</div>
-        <div class="game-price">299 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
+        <div class="game-title">5000 V-Bucks</div>
+        <div class="game-price">€35,00</div>
+        <button onclick="window.location.href='https://www.eldorado.gg/fortnite-vbucks/t/16'">Koop V-Bucks</button>
       </div>
     </div>
 
     <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Anime+Fighting+Simulator" alt="Anime Fighting Simulator">
+      <img src="https://via.placeholder.com/200x140?text=13500+V-Bucks" alt="13500 V-Bucks">
       <div class="game-info">
-        <div class="game-title">Anime Fighting Simulator</div>
-        <div class="game-price">199 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=All+Star+Tower+Defense" alt="All Star Tower Defense">
-      <div class="game-info">
-        <div class="game-title">All Star Tower Defense</div>
-        <div class="game-price">249 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Jailbreak" alt="Jailbreak">
-      <div class="game-info">
-        <div class="game-title">Jailbreak</div>
-        <div class="game-price">199 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
-      </div>
-    </div>
-
-    <div class="game-card">
-      <img src="https://via.placeholder.com/200x140?text=Pet+Simulator+X" alt="Pet Simulator X">
-      <div class="game-info">
-        <div class="game-title">Pet Simulator X</div>
-        <div class="game-price">99 Robux</div>
-        <button onclick="window.location.href='https://www.eldorado.gg/buy-robux/g/70-0-0'">Koop Robux</button>
+        <div class="game-title">13500 V-Bucks</div>
+        <div class="game-price">€68,55</div>
+        <button onclick="window.location.href='https://www.eldorado.gg/fortnite-vbucks/t/16'">Koop V-Bucks</button>
       </div>
     </div>
   </div>
