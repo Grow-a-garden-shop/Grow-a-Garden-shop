@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Grow a Garden Shop</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.7);
-      font-size: 2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #00f7ff;
-      text-shadow: 0 0 10px #00f7ff;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px;
-    }
-    .item {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid #00f7ff;
-      border-radius: 10px;
-      margin: 15px;
-      padding: 20px;
-      width: 250px;
-      box-shadow: 0 0 15px #00f7ff;
-    }
-    .item h3 {
-      margin-bottom: 10px;
-    }
-    .item p {
-      margin-bottom: 15px;
-      font-size: 18px;
-    }
-    .item button {
-      padding: 10px 15px;
-      font-size: 16px;
-      background: #00f7ff;
-      color: #000;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .item button:hover {
-      background: #00c2d8;
-    }
-    footer {
-      margin-top: 50px;
-      padding: 15px;
-      background: rgba(0, 0, 0, 0.6);
-      color: #ccc;
-      font-size: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAG Shop 🌱</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: radial-gradient(circle at center, #0ff, #001f3f);
+            color: #fff;
+            text-align: center;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+        }
+
+        header a {
+            color: #00e6e6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 5px 10px;
+        }
+
+        header a:hover {
+            background-color: #002f3f;
+            border-radius: 6px;
+        }
+
+        section {
+            display: none;
+            padding: 40px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00e6e6;
+        }
+
+        .deal {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00ffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+            text-align: left;
+        }
+
+        .deal img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .deal h2 {
+            margin-top: 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 8px 20px;
+            margin-top: 10px;
+            background-color: #00e6e6;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 0 10px #00e6e6;
+        }
+
+        .button:hover {
+            background-color: #00ffff;
+        }
+
+        .highlight {
+            background-color: #002f3f;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        p.note {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
-  <header>🌱 Grow a Garden Shop 🌱</header>
+<header>
+    <a href="#" onclick="showPage('home')">Home</a>
+    <a href="#" onclick="showPage('grow')">Grow a Garden</a>
+    <a href="#" onclick="showPage('roblox')">Roblox</a>
+    <a href="#" onclick="showPage('boosting')">Boosting</a>
+</header>
 
-  <div class="container">
-    <div class="item">
-      <h3>Mimic</h3>
-      <p>Prijs: €3,50</p>
-      <button onclick="window.location.href='https://betaalverzoek.rabobank.nl/betaalverzoek/?id=LqyH8E3oS6yGUg1_5AMEAQ'">Koop nu</button>
-    </div>
-    <div class="item">
-      <h3>Corrupt Kit</h3>
-      <p>Prijs: €2,75</p>
-      <button onclick="window.location.href='https://betaalverzoek.rabobank.nl/betaalverzoek/?id=00vo_Ih3TXGABIMJ9o5RtA'">Koop nu</button>
-    </div>
-    <div class="item">
-      <h3>Raccoon</h3>
-      <p>Prijs: €11,00</p>
-      <button onclick="window.location.href='https://betaalverzoek.rabobank.nl/betaalverzoek/?id=gBTTgOd6QrWmaujkO_81fg'">Koop nu</button>
-    </div>
-    <div class="item">
-      <h3>Rainbo Blood</h3>
-      <p>Prijs: €8,00</p>
-      <button onclick="window.location.href='https://betaalverzoek.rabobank.nl/betaalverzoek/?id=mdNuOtcxQB6bDzMAmwbskQ'">Koop nu</button>
-    </div>
-    <div class="item">
-      <h3>Red Fox</h3>
-      <p>Prijs: €1,50</p>
-    </div>
-    <div class="item">
-      <h3>Dragonfly</h3>
-      <p>Prijs: €3,00</p>
-    </div>
-    <div class="item">
-      <h3>10 qi</h3>
-      <p>Prijs: €0,50</p>
-    </div>
-    <div class="item">
-      <h3>Butterfly</h3>
-      <p>Prijs: €8,00</p>
-    </div>
-  </div>
+<section id="home" class="active">
+    <h1>Welkom bij GAG Shop 🌱</h1>
+    <p>Kies hierboven een categorie om te starten!</p>
+</section>
 
-  <footer>
-    💬 Hulp nodig? Chat met ons via de knop rechtsonder!  
-    © 2025 Grow a Garden Shop
-  </footer>
+<section id="grow">
+    <h1>Grow a Garden Shop 🌱</h1>
 
-  <!-- Tawk.to Chat Script -->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/YOUR_WIDGET_ID/default';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-</body>
-</html>
+    <div class="deal">
+        <img src="images/grote-pets.png" alt="Grote Pets">
+        <h2>🐾 Grote Pets</h2>
+        <p>💰 Prijs: €5,00</p>
+        <a class="button" href="https://betaalverzoek.rabobank.nl/betaalverzoe
