@@ -1,84 +1,166 @@
-<section id="deals">
-  <h2 style="color: #00f0ff; text-shadow: 0 0 10px #00f0ff;">✨ Speciale Deals ✨</h2>
-  <div class="deal">
-    <h3>🐾 Starter Pack</h3>
-    <p>Mimic + Red Fox + Corrupt Kit</p>
-    <p><span class="old-price">€8,25</span> <span class="new-price">€7,00</span></p>
-    <p class="discount">👉 Je bespaart €1,25!</p>
-  </div>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grow a Garden Shop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #001122, #000000);
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: rgba(0, 20, 40, 0.9);
+      padding: 20px;
+      box-shadow: 0 0 20px #00f0ff;
+    }
+    header h1 {
+      font-size: 2.5em;
+      color: #00f0ff;
+      text-shadow: 0 0 15px #00f0ff;
+    }
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 15px #00f0ff;
+    }
+    h2 {
+      color: #00f0ff;
+      text-shadow: 0 0 10px #00f0ff;
+      margin-bottom: 20px;
+    }
+    .deal, .price {
+      border: 1px solid #00f0ff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      background: rgba(0, 20, 40, 0.7);
+      box-shadow: 0 0 8px #00f0ff;
+    }
+    .deal h3, .price h3 {
+      color: #00f0ff;
+      text-shadow: 0 0 8px #00f0ff;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #ff5555;
+      margin-right: 10px;
+    }
+    .new-price {
+      font-weight: bold;
+      color: #00ff88;
+      text-shadow: 0 0 5px #00ff88;
+    }
+    .discount {
+      font-size: 0.9em;
+      color: #ffcc00;
+      text-shadow: 0 0 5px #ffcc00;
+    }
+    .buy-btn {
+      margin-top: 10px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      background: #00f0ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .buy-btn:hover {
+      background: #00ff88;
+      box-shadow: 0 0 12px #00ff88;
+    }
+  </style>
+</head>
+<body>
 
-  <div class="deal">
-    <h3>🦖 Dino Double</h3>
-    <p>T-Rex + Spinosaurus</p>
-    <p><span class="old-price">€8,50</span> <span class="new-price">€8,00</span></p>
-    <p class="discount">👉 Je bespaart €0,50!</p>
-  </div>
+  <header>
+    <h1>🌱 Grow a Garden Shop 🌱</h1>
+    <p>De beste deals en prijzen voor jouw pets!</p>
+  </header>
 
-  <div class="deal">
-    <h3>🦊 Fox Family</h3>
-    <p>Red Fox + Fennec Fox</p>
-    <p><span class="old-price">€8,00</span> <span class="new-price">€7,00</span></p>
-    <p class="discount">👉 Je bespaart €1,00!</p>
-  </div>
+  <!-- Deals sectie -->
+  <section id="grow-a-garden">
+    <h2>🔥 Grow A Garden Deals 🔥</h2>
 
-  <div class="deal">
-    <h3>🎶 Party Pack</h3>
-    <p>Disco Bee + Mimic + Pet Age 75+</p>
-    <p><span class="old-price">€14,00</span> <span class="new-price">€12,00</span></p>
-    <p class="discount">👉 Je bespaart €2,00!</p>
-  </div>
+    <div class="deal">
+      <h3>🐾 Starter Pack</h3>
+      <p>Mimic + Red Fox + Corrupt Kit</p>
+      <p><span class="old-price">€8,25</span> <span class="new-price">€7,00</span></p>
+      <p class="discount">👉 Je bespaart €1,25!</p>
+      <button class="buy-btn">Koop Nu</button>
+    </div>
 
-  <div class="deal">
-    <h3>💎 Ultimate Garden Bundle</h3>
-    <p>Raccoon + Normale Kitsune + Corrupt Kit + Red Fox</p>
-    <p><span class="old-price">€41,75</span> <span class="new-price">€37,00</span></p>
-    <p class="discount">👉 Je bespaart €4,75!</p>
-  </div>
-</section>
+    <div class="deal">
+      <h3>🦖 Dino Double</h3>
+      <p>T-Rex + Spinosaurus</p>
+      <p><span class="old-price">€8,50</span> <span class="new-price">€8,00</span></p>
+      <p class="discount">👉 Je bespaart €0,50!</p>
+      <button class="buy-btn">Koop Nu</button>
+    </div>
 
-<style>
-  #deals {
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 12px;
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 600px;
-    box-shadow: 0 0 15px #00f0ff;
-  }
-  #deals h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .deal {
-    border: 1px solid #00f0ff;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    background: rgba(0, 20, 40, 0.7);
-    box-shadow: 0 0 8px #00f0ff;
-  }
-  .deal h3 {
-    color: #00f0ff;
-    text-shadow: 0 0 8px #00f0ff;
-  }
-  .deal p {
-    color: white;
-    margin: 5px 0;
-  }
-  .old-price {
-    text-decoration: line-through;
-    color: #ff5555;
-    margin-right: 10px;
-  }
-  .new-price {
-    font-weight: bold;
-    color: #00ff88;
-    text-shadow: 0 0 5px #00ff88;
-  }
-  .discount {
-    font-size: 0.9em;
-    color: #ffcc00;
-    text-shadow: 0 0 5px #ffcc00;
-  }
-</style>
+    <div class="deal">
+      <h3>🦊 Fox Family</h3>
+      <p>Red Fox + Fennec Fox</p>
+      <p><span class="old-price">€8,00</span> <span class="new-price">€7,00</span></p>
+      <p class="discount">👉 Je bespaart €1,00!</p>
+      <button class="buy-btn">Koop Nu</button>
+    </div>
+
+    <div class="deal">
+      <h3>🎶 Party Pack</h3>
+      <p>Disco Bee + Mimic + Pet Age 75+</p>
+      <p><span class="old-price">€14,00</span> <span class="new-price">€12,00</span></p>
+      <p class="discount">👉 Je bespaart €2,00!</p>
+      <button class="buy-btn">Koop Nu</button>
+    </div>
+
+    <div class="deal">
+      <h3>💎 Ultimate Garden Bundle</h3>
+      <p>Raccoon + Normale Kitsune + Corrupt Kit + Red Fox</p>
+      <p><span class="old-price">€41,75</span> <span class="new-price">€37,00</span></p>
+      <p class="discount">👉 Je bespaart €4,75!</p>
+      <button class="buy-btn">Koop Nu</button>
+    </div>
+  </section>
+
+  <!-- Losse prijzen -->
+  <section id="prices">
+    <h2>📋 Losse Prijzen</h2>
+
+    <div class="price"><h3>10 Qi</h3><p>€0,50</p></div>
+    <div class="price"><h3>Butterfly</h3><p>€8,00</p></div>
+    <div class="price"><h3>Dragonfly</h3><p>€3,00</p></div>
+    <div class="price"><h3>Mimic</h3><p>€5,00</p></div>
+    <div class="price"><h3>Tiny Raccoon</h3><p>€7,50</p></div>
+    <div class="price"><h3>Corrupt Kitsune</h3><p>€10,00</p></div>
+    <div class="price"><h3>Spinosaurus</h3><p>€5,50</p></div>
+    <div class="price"><h3>Shiny Mooncat</h3><p>€12,00</p></div>
+  </section>
+
+  <!-- Chatbot -->
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/YOUR-ID-HERE/1j1nrfrup';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
+
+</body>
+</html>
