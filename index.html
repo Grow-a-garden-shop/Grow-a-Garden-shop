@@ -1,221 +1,84 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Game Deals</title>
+<section id="deals">
+  <h2 style="color: #00f0ff; text-shadow: 0 0 10px #00f0ff;">✨ Speciale Deals ✨</h2>
+  <div class="deal">
+    <h3>🐾 Starter Pack</h3>
+    <p>Mimic + Red Fox + Corrupt Kit</p>
+    <p><span class="old-price">€8,25</span> <span class="new-price">€7,00</span></p>
+    <p class="discount">👉 Je bespaart €1,25!</p>
+  </div>
+
+  <div class="deal">
+    <h3>🦖 Dino Double</h3>
+    <p>T-Rex + Spinosaurus</p>
+    <p><span class="old-price">€8,50</span> <span class="new-price">€8,00</span></p>
+    <p class="discount">👉 Je bespaart €0,50!</p>
+  </div>
+
+  <div class="deal">
+    <h3>🦊 Fox Family</h3>
+    <p>Red Fox + Fennec Fox</p>
+    <p><span class="old-price">€8,00</span> <span class="new-price">€7,00</span></p>
+    <p class="discount">👉 Je bespaart €1,00!</p>
+  </div>
+
+  <div class="deal">
+    <h3>🎶 Party Pack</h3>
+    <p>Disco Bee + Mimic + Pet Age 75+</p>
+    <p><span class="old-price">€14,00</span> <span class="new-price">€12,00</span></p>
+    <p class="discount">👉 Je bespaart €2,00!</p>
+  </div>
+
+  <div class="deal">
+    <h3>💎 Ultimate Garden Bundle</h3>
+    <p>Raccoon + Normale Kitsune + Corrupt Kit + Red Fox</p>
+    <p><span class="old-price">€41,75</span> <span class="new-price">€37,00</span></p>
+    <p class="discount">👉 Je bespaart €4,75!</p>
+  </div>
+</section>
+
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #1b1b1b; /* donkere Eldorado-achtige achtergrond */
-        color: #f0f0f0;
-    }
-    header {
-        background-color: #ffcc00; /* Eldorado geel */
-        padding: 20px;
-        text-align: center;
-        font-size: 2em;
-        font-weight: bold;
-        color: #1b1b1b;
-    }
-    .game-section {
-        padding: 20px;
-    }
-    .game-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        color: #ffcc00;
-    }
-    .deals {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-    .deal {
-        background-color: #2b2b2b;
-        border-radius: 10px;
-        padding: 15px;
-        width: 200px;
-        text-align: center;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .deal:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px #ffcc00;
-    }
-    .deal h3 {
-        margin: 10px 0;
-        color: #ffcc00;
-    }
-    .deal p {
-        margin: 5px 0;
-    }
-    .buy-btn {
-        background-color: #ffcc00;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        color: #1b1b1b;
-        transition: background-color 0.2s;
-    }
-    .buy-btn:hover {
-        background-color: #e6b800;
-    }
+  #deals {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 0 15px #00f0ff;
+  }
+  #deals h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .deal {
+    border: 1px solid #00f0ff;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    background: rgba(0, 20, 40, 0.7);
+    box-shadow: 0 0 8px #00f0ff;
+  }
+  .deal h3 {
+    color: #00f0ff;
+    text-shadow: 0 0 8px #00f0ff;
+  }
+  .deal p {
+    color: white;
+    margin: 5px 0;
+  }
+  .old-price {
+    text-decoration: line-through;
+    color: #ff5555;
+    margin-right: 10px;
+  }
+  .new-price {
+    font-weight: bold;
+    color: #00ff88;
+    text-shadow: 0 0 5px #00ff88;
+  }
+  .discount {
+    font-size: 0.9em;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+  }
 </style>
-</head>
-<body>
-
-<header>Game Deals Store</header>
-
-<section class="game-section" id="adopt-me">
-    <div class="game-title">Adopt Me! Bundles</div>
-    <div class="deals">
-        <div class="deal">
-            <h3>Queen Bee Bundle</h3>
-            <p>Inclusief: Butterfly, Raccoon</p>
-            <p>Prijs: €7,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Dragon Bundle</h3>
-            <p>Inclusief: Rideable Dragon</p>
-            <p>Prijs: €6,50</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Unicorn Bundle</h3>
-            <p>Inclusief: Unicorn, Gems</p>
-            <p>Prijs: €5,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Pet Starter Pack</h3>
-            <p>Inclusief: 3 random pets</p>
-            <p>Prijs: €4,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Legendary Pets Pack</h3>
-            <p>Inclusief: 1 Legendary + Gems</p>
-            <p>Prijs: €8,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-    </div>
-</section>
-
-<section class="game-section" id="tower-of-hell">
-    <div class="game-title">Tower of Hell</div>
-    <div class="deals">
-        <div class="deal">
-            <h3>Starter Pack</h3>
-            <p>Inclusief: Extra Skins</p>
-            <p>Prijs: €3,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Pro Pack</h3>
-            <p>Inclusief: Extra Levels + Gems</p>
-            <p>Prijs: €5,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Ultimate Pack</h3>
-            <p>Inclusief: Alle Skins + Boost</p>
-            <p>Prijs: €7,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Speed Run Pack</h3>
-            <p>Inclusief: Fast Track Items</p>
-            <p>Prijs: €4,50</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Level Master Pack</h3>
-            <p>Inclusief: Extra Levels + Boost</p>
-            <p>Prijs: €6,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-    </div>
-</section>
-
-<section class="game-section" id="grow-a-garden">
-    <div class="game-title">Grow A Garden Bundles</div>
-    <div class="deals">
-        <div class="deal">
-            <h3>Starter Pack</h3>
-            <p>Inclusief: Seeds + Tools</p>
-            <p>Prijs: €3,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Pro Farmer Pack</h3>
-            <p>Inclusief: Extra Seeds + Fertilizer</p>
-            <p>Prijs: €5,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Ultimate Garden Pack</h3>
-            <p>Inclusief: Rare Plants + Tools</p>
-            <p>Prijs: €8,50</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Garden Booster</h3>
-            <p>Inclusief: Growth Boosters</p>
-            <p>Prijs: €4,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>Legendary Seeds Pack</h3>
-            <p>Inclusief: Legendary Plants</p>
-            <p>Prijs: €7,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-    </div>
-</section>
-
-<section class="game-section" id="roblox">
-    <div class="game-title">Roblox Robux Bundles</div>
-    <div class="deals">
-        <div class="deal">
-            <h3>500 Robux</h3>
-            <p>Prijs: €4,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>1000 Robux</h3>
-            <p>Prijs: €9,49</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>2000 Robux</h3>
-            <p>Prijs: €18,50</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>4000 Robux</h3>
-            <p>Prijs: €36,50</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-        <div class="deal">
-            <h3>8000 Robux</h3>
-            <p>Prijs: €73,99</p>
-            <button class="buy-btn">Koop Nu</button>
-        </div>
-    </div>
-</section>
-
-<script>
-    document.querySelectorAll('.buy-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            alert('Kopen nog niet geactiveerd. Tiki/Ideal integratie komt hier.');
-        });
-    });
-</script>
-
-</body>
-</html>
